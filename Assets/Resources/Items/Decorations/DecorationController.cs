@@ -14,7 +14,7 @@ public class DecorationController : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if (GameManager.Get<PlayerInfo>().equip.GetComponentInChildren<Pickaxe>())
+        if (GameManager.Get<Player>().equip.GetComponentInChildren<Pickaxe>())
         {
             Debug.Log("test");
 

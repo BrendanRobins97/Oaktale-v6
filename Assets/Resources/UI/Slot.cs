@@ -14,6 +14,8 @@ public class Slot : MonoBehaviour, IDropHandler
     public void OnDrop(PointerEventData eventData)
     {
         ItemIcon droppedItem = eventData.pointerDrag.GetComponent<ItemIcon>();
+        if (droppedItem == null) return;
+
         Inventory droppedItemInv = droppedItem.inventory;
 
         if (droppedItemInv == inventory && slotNumber == droppedItem.slot)

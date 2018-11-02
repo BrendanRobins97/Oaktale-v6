@@ -14,7 +14,7 @@ public class BlockData : ItemData
     public int layer;
     public int health;
 
-    public override void Use1(PlayerInfo playerInfo)
+    public override void Use1(Player player)
     {
         Int2 pos = Utilities.GetMousePosition();
         Tile block = new Tile(id);
@@ -37,10 +37,10 @@ public class BlockData : ItemData
                 break;
         }
 
-        if (GameManager.Get<WorldManager>().SetBlock(pos, block)) playerInfo.inventory.RemoveItem(new Item(id));
+        if (GameManager.Get<WorldManager>().SetBlock(pos, block)) player.inventory.RemoveItem(new Item(id));
     }
 
-    public override void Use2(PlayerInfo playerInfo)
+    public override void Use2(Player player)
     {
         Int2 pos = Utilities.GetMousePosition();
         Tile block = new Tile(id);
@@ -64,7 +64,7 @@ public class BlockData : ItemData
                 break;
         }
 
-        if (GameManager.Get<WorldManager>().SetWall(pos, id)) playerInfo.inventory.RemoveItem(new Item(id));
+        if (GameManager.Get<WorldManager>().SetWall(pos, id)) player.inventory.RemoveItem(new Item(id));
     }
 
 }

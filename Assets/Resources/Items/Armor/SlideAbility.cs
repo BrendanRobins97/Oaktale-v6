@@ -7,23 +7,23 @@ public class SlideAbility : Ability
 {
     [SerializeField] private float slideSpeed;
 
-    public override void UseAbility(PlayerInfo playerInfo)
+    public override void UseAbility(Player player)
     {
-        Slide(playerInfo);
+        Slide(player);
     }
 
-    public void Slide(PlayerInfo playerInfo)
+    public void Slide(Player player)
     {
-        playerInfo.player.SetInvincible(1f);
-        playerInfo.player.SetSlide(0.5f);
-        playerInfo.player.SetAnimation("Slide", 0.5f);
-        if (playerInfo.player.transform.lossyScale.x > 0)
+        player.SetInvincible(1f);
+        player.SetSlide(0.5f);
+        player.SetAnimation("Slide", 0.5f);
+        if (player.transform.lossyScale.x > 0)
         {
-            playerInfo.player.velocity.x = slideSpeed;
+            player.velocity.x = slideSpeed;
         }
         else
         {
-            playerInfo.player.velocity.x = -slideSpeed;
+            player.velocity.x = -slideSpeed;
         }
 
     }

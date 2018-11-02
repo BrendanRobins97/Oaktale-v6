@@ -8,25 +8,22 @@ public class Inventory : MonoBehaviour {
     public delegate void InventoryAction();
     public static event InventoryAction OnInventoryChanged;
 
-    public List<Slot> slots = new List<Slot>();
-    public List<Item> items = new List<Item>();
+    [HideInInspector] public List<Slot> slots = new List<Slot>();
+    [HideInInspector] public List<Item> items = new List<Item>();
 
-    public GameObject inventoryPanelPrefab;
-    public GameObject slotPrefab;
-    public GameObject itemIconPrefab;
+    protected GameObject itemIconPrefab;
 
     [SerializeField]
     protected GameObject inventoryPanel;
-    protected PlayerInfo playerInfo;
+    protected Player player;
 
     public int maxSlots = 32;
 
     protected virtual void Awake()
     {
-        //ItemDatabase.ConstructDatabase();
-        playerInfo = FindObjectOfType<PlayerInfo>();
+        player = FindObjectOfType<Player>();
+        itemIconPrefab = GameManager.Get<Prefabs>().itemIcon;
         SetSlotUI();
-        
 
     }
 
@@ -52,7 +49,6 @@ public class Inventory : MonoBehaviour {
         }
         inventoryPanel.transform.SetAsFirstSibling();
 
-        //inventoryPanel.SetActive(false);
         InventoryChanged();
     }
     

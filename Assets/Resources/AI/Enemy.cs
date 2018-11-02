@@ -84,6 +84,6 @@ public class Enemy : Character
     }
 
     private void OnDestroy() {
-        GameManager.Get<PlayerInfo>().player.experience += experienceToGive;
+        GameManager.Get<Player>().experience += experienceToGive;
     }
 }

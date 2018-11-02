@@ -7,7 +7,7 @@ public class ArmorInventory : Inventory {
     protected override void Awake()
     {
         base.Awake();
-        OnInventoryChanged += playerInfo.actionBar.UpdateActionBarImages;
+        OnInventoryChanged += player.actionBar.UpdateActionBarImages;
     }
 
     protected override void SetSlotUI()
@@ -29,12 +29,12 @@ public class ArmorInventory : Inventory {
     public override void AddItem(Item item, int amount = 1, int slot = 0)
     {
         base.AddItem(item, amount, slot);
-        playerInfo.actionBar.UpdateActionBarImages();
+        player.actionBar.UpdateActionBarImages();
     }
 
     public override void RemoveItem(Item item, int amount = 1, int slot = 0)
     {
         base.RemoveItem(item, amount);
-        playerInfo.actionBar.UpdateActionBarImages();
+        player.actionBar.UpdateActionBarImages();
     }
 }

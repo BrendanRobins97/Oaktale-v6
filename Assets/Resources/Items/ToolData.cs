@@ -8,19 +8,19 @@ public class ToolData : ItemData
 {
     public GameObject tool;
 
-    public override void Use1(PlayerInfo playerInfo)
+    public override void Use1(Player player)
     {
-        playerInfo.equip.GetComponentInChildren<Tool>().PrimaryUse();
+        player.equip.GetComponentInChildren<Tool>().PrimaryUse();
     }
 
-    public override void Use2(PlayerInfo playerInfo)
+    public override void Use2(Player player)
     {
-        playerInfo.equip.GetComponentInChildren<Tool>().SecondaryUse();
+        player.equip.GetComponentInChildren<Tool>().SecondaryUse();
     }
 
-    public override void Activate(PlayerInfo playerInfo)
+    public override void Activate(Player player)
     {
-        Instantiate(tool, playerInfo.equip.transform);
+        Instantiate(tool, player.equip.transform);
     }
 
 }

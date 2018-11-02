@@ -7,20 +7,20 @@ public class DashAbility : Ability {
 
     [SerializeField] private float dashSpeed;
 
-	public override void UseAbility(PlayerInfo playerInfo)
+	public override void UseAbility(Player player)
     {
-        Dash(playerInfo);
+        Dash(player);
     }
 
-    public void Dash(PlayerInfo playerInfo)
+    public void Dash(Player player)
     {
-        playerInfo.player.SetInvincible(1f);
-        if (playerInfo.player.transform.lossyScale.x > 0)
+        player.SetInvincible(1f);
+        if (player.transform.lossyScale.x > 0)
         {
-            playerInfo.player.velocity.x = dashSpeed;
+            player.velocity.x = dashSpeed;
         } else
         {
-            playerInfo.player.velocity.x = -dashSpeed;
+            player.velocity.x = -dashSpeed;
         }
 
     }

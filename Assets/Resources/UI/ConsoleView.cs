@@ -17,7 +17,7 @@ public class ConsoleView : MonoBehaviour
     public Text logTextArea;
     public InputField inputField;
 
-    public PlayerInfo playerInfo;
+    public Player player;
     public bool visible = false;
 
     void Start()
@@ -29,7 +29,7 @@ public class ConsoleView : MonoBehaviour
             GameManager.Set(this);
         }
         updateLogStr(console.log);
-        console.playerInfo = playerInfo;
+        console.player = player;
     }
 
     ~ConsoleView()

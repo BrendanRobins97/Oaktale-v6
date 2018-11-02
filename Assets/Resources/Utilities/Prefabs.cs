@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class Prefabs : MonoBehaviour
 {
-
+    public static Prefabs Instance;
     public GameObject pickup;
-
     public GameObject mouse;
+    public GameObject itemIcon;
 
-    // Use this for initialization
     void Awake()
     {
         GameManager.Set(this);
+        Instance = this;
     }
-
 }

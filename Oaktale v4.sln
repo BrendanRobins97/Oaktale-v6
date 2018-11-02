@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{1984AABA-C4E7-B18C-2399-3595646AFC39}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Oaktale v4", "Assembly-CSharp.csproj", "{1984AABA-C4E7-B18C-2399-3595646AFC39}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-Editor", "Assembly-CSharp-Editor.csproj", "{869A0788-C772-DAF8-70EB-4CD922E3948F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Oaktale v4", "Assembly-CSharp-Editor.csproj", "{869A0788-C772-DAF8-70EB-4CD922E3948F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

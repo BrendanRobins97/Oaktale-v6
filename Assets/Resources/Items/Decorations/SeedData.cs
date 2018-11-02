@@ -8,7 +8,7 @@ public class SeedData : DecorationData {
     public List<Sprite> stageSprites;
     public List<float> stageTimers;
 
-    public override void Use1(PlayerInfo playerInfo)
+    public override void Use1(Player player)
     {
         Int2 pos = Utilities.GetMousePosition();
         if (GameManager.Get<WorldManager>().currentWorld.GetTile(0, pos + Int2.down).Info != TextureOffset.Watered)
@@ -18,7 +18,7 @@ public class SeedData : DecorationData {
         if (GameManager.Get<WorldManager>().SetDecoration(pos, id))
         {
             InstantiateDecoration(pos);
-            playerInfo.inventory.RemoveItem(new Item(id));
+            player.inventory.RemoveItem(new Item(id));
         }
     }
     protected override void SetUpPrefab(int x, int y, ref DecorationController decorationController)

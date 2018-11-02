@@ -66,7 +66,7 @@ public class Pickup : MonoBehaviour
         } while (distance > 3f || count <= maxFrames);
 
         // Add item to inventory and destroy pickup
-        player.GetComponent<Player>().playerInfo.inventory.AddItem(item, amount);
+        player.GetComponent<Player>().inventory.AddItem(item, amount);
         SimplePool.Despawn(gameObject);
     }
 }

@@ -14,6 +14,11 @@ public class UIHandler : MonoBehaviour {
     public Slider healthBar;
     public ExternalInventory externInv;
 
+    private Player player;
+
+    private void Start() {
+        player = GameManager.Get<Player>();
+    }
     void Update () {
         if (!GameManager.Get<ConsoleView>().visible)
         {
@@ -46,7 +51,11 @@ public class UIHandler : MonoBehaviour {
                 craftingUI.SetActive(!craftingUI.activeInHierarchy);
             }
         }
-        
+        if (playerInventory.activeInHierarchy || craftingUI.activeInHierarchy) {
+            player.acceptClick = false;
+        } else {
+            player.acceptClick = true;
+        }
         healthBar.value = healthManager.HealthPercent();
     }
 

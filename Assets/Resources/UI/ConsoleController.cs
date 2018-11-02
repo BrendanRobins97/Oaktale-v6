@@ -12,7 +12,7 @@ public delegate void CommandHandler(string[] args);
 
 public class ConsoleController
 {
-    public PlayerInfo playerInfo;
+    public Player player;
 
     #region Event declarations
     // Used to communicate with ConsoleView
@@ -159,18 +159,18 @@ public class ConsoleController
         if (args.Length == 1)
         {
             Item item = new Item(int.Parse(args[0]));
-            playerInfo.inventory.AddItem(item);
+            player.inventory.AddItem(item);
         } else if (args.Length == 2)
         {
             Item item = new Item(int.Parse(args[0]));
-            playerInfo.inventory.AddItem(item, int.Parse(args[1]));
+            player.inventory.AddItem(item, int.Parse(args[1]));
         }
         
     }
 
     void AddAllItems(string[] args)
     {
-        playerInfo.inventory.AddAllItems();
+        player.inventory.AddAllItems();
     }
 
     void Help(string[] args)

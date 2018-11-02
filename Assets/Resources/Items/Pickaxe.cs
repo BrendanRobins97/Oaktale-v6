@@ -50,7 +50,7 @@ public class Pickaxe : Tool
     {
         blocksToMine.Clear();
 
-        if (GameManager.Get<PlayerInfo>().directionalMining)
+        if (GameManager.Get<Player>().directionalMining)
         {
             bool hitBlock = false;
             float directionX = Camera.main.ScreenToWorldPoint(Input.mousePosition).x - transform.position.x;

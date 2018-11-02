@@ -1576,7 +1576,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4342153684563056}
-  - component: {fileID: 114877600902292238}
   - component: {fileID: 114843304382246054}
   m_Layer: 8
   m_Name: MainCharacter
@@ -1843,7 +1842,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1886159502165846}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 75, y: 500, z: 0}
+  m_LocalPosition: {x: 75, y: 560, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 224610276979660174}
@@ -2297,7 +2296,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 1.375}
+  m_Offset: {x: 0, y: 1.1666666}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
@@ -2308,7 +2307,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.5, y: 2.75}
+  m_Size: {x: 1.1666666, y: 2.333334}
   m_EdgeRadius: 0
 --- !u!81 &81549402120396606
 AudioListener:
@@ -2474,7 +2473,7 @@ MonoBehaviour:
   viewContainer: {fileID: 1254237431506932}
   logTextArea: {fileID: 114580812342966022}
   inputField: {fileID: 114344721156662886}
-  playerInfo: {fileID: 114877600902292238}
+  player: {fileID: 114092441318854300}
   visible: 0
 --- !u!114 &114029899135654718
 MonoBehaviour:
@@ -2877,8 +2876,16 @@ MonoBehaviour:
   jump: 0
   targetVelocity: {x: 0, y: 0}
   colPositions: []
-  playerInfo: {fileID: 114877600902292238}
+  playerObject: {fileID: 1391579446768478}
+  uiHandler: {fileID: 114255462653681130}
+  actionBar: {fileID: 114507741548353836}
+  equip: {fileID: 1729749219903776}
+  directionalMining: 1
+  experience: 0
   admin: 0
+  acceptInput: 1
+  acceptClick: 1
+  inventory: {fileID: 114842088048994262}
 --- !u!114 &114095639995652686
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4738,7 +4745,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16664307b05289145ab1f9fdb0f86cf1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerInfo: {fileID: 114877600902292238}
+  player: {fileID: 0}
   actionSlot: {fileID: 1260623076818614, guid: 6427f4ebfe975214e83da8e9bae956e4, type: 2}
   highlight: {fileID: 1788329282366162, guid: 16a1993b003a7f644a2113d6d0c179cd, type: 2}
   actionSlots: []
@@ -5722,11 +5729,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   slots: []
-  inventoryPanelPrefab: {fileID: 1382544718749242, guid: 6020f89613a5ce2469285029ebca84f9,
-    type: 2}
-  slotPrefab: {fileID: 1547587955191654, guid: 7d4266ec75fe39b48ac781be1bf456eb, type: 2}
-  itemIconPrefab: {fileID: 1946576399716310, guid: a0a1457b7aaa8a74fbdc9e9c3ab60aa4,
-    type: 2}
   inventoryPanel: {fileID: 1875697808973884}
   maxSlots: 32
 --- !u!114 &114842785713542938
@@ -5889,25 +5891,6 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
---- !u!114 &114877600902292238
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1886159502165846}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9e2412a947c3e24448d295321c1b185f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerObject: {fileID: 1886159502165846}
-  uiHandler: {fileID: 114255462653681130}
-  inventory: {fileID: 114842088048994262}
-  actionBar: {fileID: 114507741548353836}
-  player: {fileID: 114092441318854300}
-  equip: {fileID: 1729749219903776}
-  decorationManager: {fileID: 0}
-  directionalMining: 1
 --- !u!114 &114887004161233554
 MonoBehaviour:
   m_ObjectHideFlags: 1

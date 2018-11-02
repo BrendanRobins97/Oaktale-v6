@@ -21,7 +21,7 @@ public class Door : DecorationController
     private void Start()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
-        player = GameManager.Get<PlayerInfo>().player;
+        player = GameManager.Get<Player>();
     }
 
     protected virtual void OnMouseOver()

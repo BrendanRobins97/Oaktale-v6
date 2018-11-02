@@ -59,7 +59,7 @@ public class ItemIcon : MonoBehaviour, IDragHandler, IPointerDownHandler, IEndDr
         offset = eventData.position - new Vector2(transform.position.x, transform.position.y);
 
 
-        this.transform.SetParent(this.transform.parent.parent);
+        this.transform.SetParent(this.transform.parent.parent.parent);
         this.transform.position = eventData.position - offset;
         GetComponent<CanvasGroup>().blocksRaycasts = false;
     }

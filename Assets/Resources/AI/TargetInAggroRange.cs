@@ -9,7 +9,7 @@ public class TargetInAggroRange : StateMachineBehaviour
 
     public override void OnStateEnter(Animator animator, AnimatorStateInfo animatorStateInfo, int layerIndex)
     {
-        target = FindObjectOfType<PlayerInfo>().transform;
+        target = FindObjectOfType<Player>().transform;
     }
     public override void OnStateUpdate(Animator animator, AnimatorStateInfo animatorStateInfo, int layerIndex)
     {

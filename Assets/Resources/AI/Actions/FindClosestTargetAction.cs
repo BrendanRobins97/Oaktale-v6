@@ -7,6 +7,6 @@ public class FindClosestTargetAction : Action
 {
     public override void InitialAction(Enemy controller)
     {
-        controller.target = FindObjectOfType<PlayerInfo>().transform;
+        controller.target = FindObjectOfType<Player>().transform;
     }
 }

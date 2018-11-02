@@ -15,22 +15,22 @@ public class ItemData : ScriptableObject
     public int stackSize;
 
     // Use 1 is left click, the main use
-    public virtual void Use1(PlayerInfo playerInfo)
+    public virtual void Use1(Player player)
     {
     }
 
     // Use 2 is right click, the special use
-    public virtual void Use2(PlayerInfo playerInfo)
+    public virtual void Use2(Player player)
     {
     }
 
-    public virtual void Activate(PlayerInfo playerInfo)
+    public virtual void Activate(Player player)
     {
     }
 
-    public virtual void Deactivate(PlayerInfo playerInfo)
+    public virtual void Deactivate(Player player)
     {
-        foreach (Transform child in playerInfo.equip.transform) Destroy(child.gameObject);
+        foreach (Transform child in player.equip.transform) Destroy(child.gameObject);
     }
 
     public virtual void Delete(int x, int y)

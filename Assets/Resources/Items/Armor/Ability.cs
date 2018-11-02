@@ -4,5 +4,5 @@ using UnityEngine;
 
 public class Ability : ScriptableObject {
 
-    public virtual void UseAbility(PlayerInfo playerInfo) { }
+    public virtual void UseAbility(Player player) { }
 }

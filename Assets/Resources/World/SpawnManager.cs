@@ -10,7 +10,7 @@ using System.Collections.Generic;
 public class SpawnManager : MonoBehaviour
 {
     private List<GameObject> spawns = new List<GameObject>();
-    private PlayerInfo player;
+    private Player player;
     private static float maxDistance = 30f;
 
     private void Awake()
@@ -21,7 +21,7 @@ public class SpawnManager : MonoBehaviour
 
     private void Start()
     {
-        player = GameManager.Get<PlayerInfo>();
+        player = GameManager.Get<Player>();
     }
     private void Update()
     {

@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class ActionBar : MonoBehaviour {
 
-    public PlayerInfo playerInfo;
+    public Player player;
     
     public GameObject actionSlot;
     public GameObject highlight;
@@ -19,7 +19,8 @@ public class ActionBar : MonoBehaviour {
     private RectTransform highlightRect;
 
     void Awake () {
-        inventory = playerInfo.inventory;
+        player = GameManager.Get<Player>();
+        inventory = player.inventory;
         actionSlots = new GameObject[10];
         for (int i = 0; i < 10; i++)
         {
@@ -119,8 +120,8 @@ public class ActionBar : MonoBehaviour {
         if (prevIndex != index)
         {
             Debug.Log("Prev Index:" + prevIndex + " Index: " + index);
-            ItemDatabase.GetItemData(inventory.items[prevIndex].id).Deactivate(playerInfo);
-            ItemDatabase.GetItemData(inventory.items[index].id).Activate(playerInfo);
+            ItemDatabase.GetItemData(inventory.items[prevIndex].id).Deactivate(player);
+            ItemDatabase.GetItemData(inventory.items[index].id).Activate(player);
             prevIndex = index;
         }
         highlightRect.anchoredPosition = new Vector3(4 + index * 72, 0, 0);

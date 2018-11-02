@@ -9,23 +9,23 @@ public class WeaponData : ItemData {
 
     private Weapon wep;
 
-    public override void Use1(PlayerInfo playerInfo)
+    public override void Use1(Player player)
     {
         wep.Attack();
     }
 
-    public override void Use2(PlayerInfo playerInfo)
+    public override void Use2(Player player)
     {
         wep.SpecialAttack();
     }
 
-    public override void Activate(PlayerInfo playerInfo)
+    public override void Activate(Player player)
     {                                                                                                           
-        Instantiate(weapon, playerInfo.equip.transform);
-        wep = playerInfo.equip.GetComponentInChildren<Weapon>();
-        if (playerInfo.player.currentItem.id != 0) {
-            Debug.Log(playerInfo.player.currentItem.id);
-            WeaponItem wepItem = (WeaponItem)playerInfo.player.currentItem;
+        Instantiate(weapon, player.equip.transform);
+        wep = player.equip.GetComponentInChildren<Weapon>();
+        if (player.currentItem.id != 0) {
+            Debug.Log(player.currentItem.id);
+            WeaponItem wepItem = (WeaponItem)player.currentItem;
             wep.experience = wepItem.experience;
 
         }

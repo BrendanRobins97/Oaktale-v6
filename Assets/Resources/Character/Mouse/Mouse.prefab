@@ -26,7 +26,6 @@ GameObject:
   - component: {fileID: 114714551482268636}
   - component: {fileID: 114216715653302540}
   - component: {fileID: 50862191805253572}
-  - component: {fileID: 114720684565521092}
   - component: {fileID: 114624159615993348}
   - component: {fileID: 114604142464628110}
   m_Layer: 19
@@ -244,11 +243,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e65fe69158f4714eb77c13dea15d4a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  name: 
+  moveSpeed: 16
+  width: 0
+  height: 0
+  maxFallSpeed: 100
+  accelerationTimeAirborne: 0.2
+  accelerationTimeGrounded: 0.05
+  jumpHeight: 8
+  timeToJumpApex: 0.4
+  velocity: {x: 0, y: 0}
+  animator: {fileID: 0}
+  facingRight: 1
+  jump: 0
+  targetVelocity: {x: 0, y: 0}
+  colPositions: []
+  experienceToGive: 10
   currentState: {fileID: 11400000, guid: 26dd25fb7a8943c4bb7d2f38ccf47b00, type: 2}
   remainState: {fileID: 0}
   target: {fileID: 0}
   stateTimeElapsed: 0
-  enemy: {fileID: 0}
 --- !u!114 &114714551482268636
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -260,32 +274,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7a947a59bfcaba44b7b507020ee455a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &114720684565521092
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1352474976040418}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6b1c70a4a173fa4689281e7d754e910, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  name: Mouse
-  moveSpeed: 8
-  width: 2
-  height: 1
-  maxFallSpeed: 100
-  accelerationTimeAirborne: 0.2
-  accelerationTimeGrounded: 0.2
-  jumpHeight: 8
-  timeToJumpApex: 0.4
-  velocity: {x: 0, y: 0}
-  animator: {fileID: 0}
-  facingRight: 1
-  jump: 0
-  targetVelocity: {x: 0, y: 0}
-  colPositions: []
 --- !u!114 &114721292189510970
 MonoBehaviour:
   m_ObjectHideFlags: 1

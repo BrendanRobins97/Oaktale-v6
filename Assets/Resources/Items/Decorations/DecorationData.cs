@@ -22,12 +22,12 @@ public class DecorationData : ItemData
     public DecorationController Prefab;
     public int Width;
 
-    public override void Use1(PlayerInfo playerInfo)
+    public override void Use1(Player player)
     {
         Int2 pos = Utilities.GetMousePosition();
         if (!GameManager.Get<WorldManager>().SetDecoration(pos, id)) return;
         InstantiateDecoration(pos);
-        playerInfo.inventory.RemoveItem(new Item(id));
+        player.inventory.RemoveItem(new Item(id));
     }
 
     protected virtual void SetUpPrefab(int x, int y, ref DecorationController decorationController)

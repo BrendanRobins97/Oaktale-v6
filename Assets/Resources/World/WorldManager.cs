@@ -12,8 +12,6 @@ public class WorldManager : MonoBehaviour
     public World currentWorld;
     public List<World> worlds = new List<World>();
 
-    public PlayerInfo playerInfo;
-
     public bool spriteImage;
     public bool generateTerrain;
 

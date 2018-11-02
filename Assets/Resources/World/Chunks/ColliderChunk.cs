@@ -16,7 +16,7 @@ public class ColliderChunk : Chunk
     {
         coll = GetComponent<PolygonCollider2D>();
         currentWorld = GameManager.Get<WorldManager>().currentWorld;
-        player = GameManager.Get<PlayerInfo>().transform;
+        player = GameManager.Get<Player>().transform;
     }
 
     private void FixedUpdate()
